@@ -79,4 +79,8 @@
 .diamond-shape {
   transform: rotate(45deg);
   position: relative;
+  height: 30px;
+  width: 30px;
+  left: 13px;
+  margin-top : 13px;
 }
