@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <title>Diamond race</title>
+  </head>
+  <body>
+    <h1 id="title">Diamond race</h1>
+    <div id="game">
+      <p id="start-text">start</p>
+      <div class="line start"> </div>
+      <p id="end-text">end</p>
+      <div class="line end"> </div>
+      <div class="diamond-shape" id="blue-diamond"></div>
+      <div class="diamond-shape" id="green-diamond"></div>
+      <div class="diamond-shape" id="red-diamond"></div>
+      <div class="diamond-shape" id="yellow-diamond"></div>
+    </div>
+
+    <div id="scoreboard">
+      <button type="button" id="reset">Reset</button>
+      <h4>Score board</h4>
+      <div class="scoreboard-colors">
+        <div id="blue" class="colors"></div>
+        <div id="green" class="colors"></div>
+        <div id="red" class="colors"></div>
+        <div id="yellow" class="colors"></div>
+      </div>
+      <div class="scoreboard_ints">
+        <div id="blue-score" class="scores">0</div>
+        <div id="green-score" class="scores">0</div>
+        <div id="red-score" class="scores">0</div>
+        <div id="yellow-score" class="scores">0</div>
+      </div>
+    </div>
+
+    <script src="diamondRace.js"></script>
+  </body>
+</html>

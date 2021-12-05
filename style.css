@@ -1,0 +1,82 @@
+#title {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+#start-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.line{
+    border-left: 3px solid black;
+    height: 200px;
+    position: absolute;
+}
+.line.start{
+    left: 84px;
+}
+.line.end{
+    left: 672px;
+}
+
+#end-text {
+  padding-left: 80%;
+  display: inline-block;
+}
+
+#game {
+  height: 400px;
+  width: 700px;
+  display: inline-block;
+  padding-left: 50px;
+}
+#scoreboard {
+  display: inline-block;
+  height: 400px;
+  width: 20%;
+  position: absolute;
+}
+
+.scoreboard-colors {
+  float: left;
+}
+.scoreboard_ints {
+  width: 10%;
+  float: right;
+}
+
+.scores {
+  padding: 4px;
+}
+
+.colors {
+  padding: 10px;
+  width: 20px;
+  border-radius: 5px;
+  display: block;
+}
+
+#blue {
+  background: blue;
+}
+
+#green {
+  background: green;
+  margin-top: 10px;
+}
+
+#red {
+  background: red;
+  margin-top: 10px;
+}
+
+#yellow {
+  background: yellow;
+  margin-top: 10px;
+}
+
+.diamond-shape {
+  transform: rotate(45deg);
+  position: relative;
+}
