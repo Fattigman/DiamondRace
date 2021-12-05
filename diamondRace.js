@@ -13,11 +13,7 @@ const diamondButtons = document.getElementsByClassName('diamond-shape');
 // Creates the style for the diamonds
 function createDiamonds() {
   for (i = 0; i < diamondButtons.length; i++) {
-    diamondButtons[i].style.height = '30px';
-    diamondButtons[i].style.width = '30px';
-    diamondButtons[i].style.left = '13px';
     diamondButtons[i].style.background = colours[i];
-    diamondButtons[i].style.marginTop = '13px';
   }
 }
 
