@@ -8,16 +8,16 @@
   display: inline-block;
 }
 
-.line{
-    border-left: 3px solid black;
-    height: 200px;
-    position: absolute;
+.line {
+  border-left: 3px solid black;
+  height: 200px;
+  position: absolute;
 }
-.line.start{
-    left: 84px;
+.line.start {
+  left: 84px;
 }
-.line.end{
-    left: 672px;
+.line.end {
+  left: 672px;
 }
 
 #end-text {
