@@ -1,4 +1,3 @@
-/* eslint-disable require-jsdoc */
 // scores and colours of the diamonds in their respective order
 let scores = [0, 0, 0, 0];
 const colours = ['blue', 'green', 'red', 'yellow'];
