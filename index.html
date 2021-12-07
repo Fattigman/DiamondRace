@@ -5,16 +5,19 @@
     <title>Diamond race</title>
   </head>
   <body>
-    <h1 id="title">Diamond race</h1>
+    <div class='title'>
+      <h1 id="title">Diamond race</h1>
+    </div>
+    
     <div id="game">
       <p id="start-text">start</p>
       <div class="line start"></div>
       <p id="end-text">end</p>
       <div class="line end"></div>
-      <div class="diamond-shape"></div>
-      <div class="diamond-shape"></div>
-      <div class="diamond-shape"></div>
-      <div class="diamond-shape"></div>
+      <custom-diamond color='blue'></custom-diamond>
+      <custom-diamond color='green'></custom-diamond>
+      <custom-diamond color='red'></custom-diamond>
+      <custom-diamond color='yellow'></custom-diamond>
     </div>
 
     <div id="scoreboard">
@@ -24,7 +27,7 @@
         <div class="colors blue"></div>
         <div class="colors green"></div>
         <div class="colors red"></div>
-        <div class="colors yellow"></div>
+        <div class="colors yellow "></div>
       </div>
       <div class="scoreboard_ints">
         <div class="scores">0</div>
@@ -33,7 +36,6 @@
         <div class="scores">0</div>
       </div>
     </div>
-
     <script src="diamondRace.js"></script>
   </body>
 </html>
