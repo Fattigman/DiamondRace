@@ -11,6 +11,8 @@ const scoreBoardScores = document.getElementsByClassName('scores');
 const diamondButtons = document.getElementsByTagName('custom-diamond');
 
 // Diamond class for creating diamonds objects in html. 
+//newPos moves the diamond forward
+//resetPos resets the position of the diamond
 class Diamond extends HTMLElement {
   constructor() {
       super();
