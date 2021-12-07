@@ -1,8 +1,9 @@
-#title {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 #start-text {
   padding-left: 15px;
   display: inline-block;
@@ -33,8 +34,6 @@
 }
 #scoreboard {
   display: inline-block;
-  height: 400px;
-  width: 20%;
   position: absolute;
 }
 
@@ -42,12 +41,11 @@
   float: left;
 }
 .scoreboard_ints {
-  width: 10%;
   float: right;
 }
 
 .scores {
-  padding: 4px;
+  padding: 5px;
 }
 
 .colors {
@@ -75,13 +73,3 @@
   background: yellow;
   margin-top: 10px;
 }
-
-.diamond-shape {
-  transform: rotate(45deg);
-  position: relative;
-  height: 30px;
-  width: 30px;
-  left: 13px;
-  margin-top: 13px;
-}
-
