@@ -2,7 +2,21 @@
 // scores and colours of the diamonds in their respective order
 let scores = [0, 0, 0, 0];
 const colours = ['blue', 'green', 'red', 'yellow'];
-const template = document.createElement("template");
+const template = document.createElement('template');
+template.innerHTML = `
+  <style>
+  .diamond {
+		width: 30px;
+    height: 30px;
+    margin-top:13px;
+    transform: rotate(45deg);
+    left:13px;
+    position:relative;
+	}
+  </style>
+  <div class="diamond">
+  </div>
+`;
 
 // Assigns functions to clickable elements
 const resetButton = document.getElementById('reset');
@@ -11,27 +25,19 @@ const scoreBoardScores = document.getElementsByClassName('scores');
 const diamondButtons = document.getElementsByTagName('custom-diamond');
 
 // Diamond class for creating diamonds objects in html. 
-//newPos moves the diamond forward
-//resetPos resets the position of the diamond
 class Diamond extends HTMLElement {
   constructor() {
       super();
-      this.innerHTML = `<div 
-      style="background-color:${this.getAttribute('color')}; 
-      height:30px; width:30px;transform: rotate(45deg); display:block;
-      position: relative; left: 13px; margin-top:13px;"></div>`;
+      this.showInfo = true;
+      this.attachShadow({ mode: 'open' });
+      this.shadowRoot.appendChild(template.content.cloneNode(true));
+      this.shadowRoot.querySelector('div').style.background = this.getAttribute('color')
   }
   newPos(pos) {
-    this.innerHTML = `<div 
-      style="background-color:${this.getAttribute('color')}; 
-      height:30px; width:30px;transform: rotate(45deg);
-      position: relative; left: ${(pos)*59+13}px; margin-top:13px;"></div>`;
+    this.shadowRoot.querySelector('div').style.left = `${(pos)*59+13}px`
   }
   resetPos() {
-    this.innerHTML = `<div 
-      style="background-color:${this.getAttribute('color')}; 
-      height:30px; width:30px;transform: rotate(45deg);
-      position: relative; left: 13px; margin-top:13px;"></div>`;
+    this.shadowRoot.querySelector('div').style.left = '13px'
   }
 }
 
