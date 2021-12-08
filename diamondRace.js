@@ -1,17 +1,18 @@
 /* eslint-disable require-jsdoc */
 // scores and colours of the diamonds in their respective order
 let scores = [0, 0, 0, 0];
-const colours = ['blue', 'green', 'red', 'yellow'];
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
   .diamond {
 		width: 30px;
     height: 30px;
-    margin-top:13px;
+    margin-top:15px;
     transform: rotate(45deg);
     left:13px;
     position:relative;
+    border: 1px;
+    border-style:solid;
 	}
   </style>
   <div class="diamond">
@@ -33,15 +34,15 @@ class Diamond extends HTMLElement {
       this.shadowRoot.appendChild(template.content.cloneNode(true));
       this.shadowRoot.querySelector('div').style.background = this.getAttribute('color')
   }
-  newPos(pos) {
+  newPos(pos) {// Moved diamond forward
     this.shadowRoot.querySelector('div').style.left = `${(pos)*59+13}px`
   }
-  resetPos() {
+  resetPos() {// Resets the diamond position
     this.shadowRoot.querySelector('div').style.left = '13px'
   }
 }
 
-customElements.get('custom-diamond') || customElements.define('custom-diamond', Diamond);
+customElements.define('custom-diamond', Diamond);
 
 // Assigns each diamond a function that increases their score when clicked upon
 function assignPointFunctionToDiamonds() {
