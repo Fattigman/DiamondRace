@@ -9,7 +9,7 @@ template.innerHTML = `
     height: 30px;
     margin-top:15px;
     transform: rotate(45deg);
-    left:13px;
+    left:12px;
     position:relative;
     border: 1px;
     border-style:solid;
@@ -35,10 +35,10 @@ class Diamond extends HTMLElement {
       this.shadowRoot.querySelector('div').style.background = this.getAttribute('color')
   }
   newPos(pos) {
-    this.shadowRoot.querySelector('div').style.left = `${(pos)*59+13}px`
+    this.shadowRoot.querySelector('div').style.left = `${(pos)*59+12}px`
   }
   resetPos() {
-    this.shadowRoot.querySelector('div').style.left = '13px'
+    this.shadowRoot.querySelector('div').style.left = '12px'
   }
 }
 
