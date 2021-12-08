@@ -4,19 +4,20 @@ let scores = [0, 0, 0, 0];
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
-  .diamond {
+  .diamond{
 		width: 30px;
     height: 30px;
-    margin-top:15px;
+    margin-top:11px;
     transform: rotate(45deg);
     left:12px;
     position:relative;
     border: 1px;
-    border-style:solid;
+    border-style:solid;  
 	}
   </style>
   <div class="diamond">
   </div>
+  <br></br>
 `;
 
 // Assigns functions to clickable elements
@@ -32,7 +33,8 @@ class Diamond extends HTMLElement {
       this.showInfo = true;
       this.attachShadow({ mode: 'open' });
       this.shadowRoot.appendChild(template.content.cloneNode(true));
-      this.shadowRoot.querySelector('div').style.background = this.getAttribute('color')
+      this.shadowRoot.querySelector('div').style.background = this.getAttribute('color');
+      this.shadowRoot.querySelector('div').style.display = 'inline-block'
   }
   newPos(pos) {
     this.shadowRoot.querySelector('div').style.left = `${(pos)*59+12}px`
