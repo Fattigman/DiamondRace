@@ -34,10 +34,10 @@ class Diamond extends HTMLElement {
       this.shadowRoot.appendChild(template.content.cloneNode(true));
       this.shadowRoot.querySelector('div').style.background = this.getAttribute('color')
   }
-  newPos(pos) {// Moved diamond forward
+  newPos(pos) {
     this.shadowRoot.querySelector('div').style.left = `${(pos)*59+13}px`
   }
-  resetPos() {// Resets the diamond position
+  resetPos() {
     this.shadowRoot.querySelector('div').style.left = '13px'
   }
 }
@@ -56,8 +56,6 @@ function assignPointFunctionToDiamonds() {
 function addPoint(evt) {
   if (Math.max(...scores) < 10) {
     scores[evt.currentTarget.pos] = scores[evt.currentTarget.pos] +1;
-    newPos = scores[evt.currentTarget.pos] * 60;
-    evt.currentTarget.style.left = newPos+'px';
     evt.currentTarget.newPos(scores[evt.currentTarget.pos])
     updateHTMLScores();
   }
